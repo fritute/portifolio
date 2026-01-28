@@ -1,0 +1,117 @@
+<div class="portfolio-container">
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <h1 class="name">{{ name }}</h1>
+      <p class="title">Desenvolvedor Full Stack</p>
+      <div class="social-links">
+        <a [href]="socialLinks.linkedin" target="_blank" rel="noopener noreferrer" class="social-btn linkedin">
+          <span>LinkedIn</span>
+        </a>
+        <a [href]="socialLinks.github" target="_blank" rel="noopener noreferrer" class="social-btn github">
+          <span>GitHub</span>
+        </a>
+        <a [href]="socialLinks.instagram" target="_blank" rel="noopener noreferrer" class="social-btn instagram">
+          <span>Instagram</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Sobre Mim -->
+    <section class="section">
+      <h2 class="section-title">Sobre Mim</h2>
+      <p class="section-text">{{ about }}</p>
+    </section>
+
+    <!-- Objetivo -->
+    <section class="section">
+      <h2 class="section-title">Objetivo</h2>
+      <p class="section-text">{{ objective }}</p>
+    </section>
+
+    <!-- Habilidades -->
+    <section class="section">
+      <h2 class="section-title">Habilidades Técnicas</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3 class="skill-title">Front End</h3>
+          <div class="skill-tags">
+            <span class="tag" *ngFor="let skill of skills.frontend">{{ skill }}</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="skill-title">Back End</h3>
+          <div class="skill-tags">
+            <span class="tag" *ngFor="let skill of skills.backend">{{ skill }}</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="skill-title">Mobile</h3>
+          <div class="skill-tags">
+            <span class="tag" *ngFor="let skill of skills.mobile">{{ skill }}</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="skill-title">Gestão de Projetos</h3>
+          <div class="skill-tags">
+            <span class="tag" *ngFor="let skill of skills.management">{{ skill }}</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Educação -->
+    <section class="section">
+      <h2 class="section-title">Educação</h2>
+      <div class="education-item">
+        <h3 class="education-course">{{ education.course }}</h3>
+        <p class="education-institution">{{ education.institution }}</p>
+        <p class="education-period">{{ education.period }}</p>
+      </div>
+      <div class="education-item">
+        <p class="education-institution">{{ education.highSchool }}</p>
+      </div>
+    </section>
+
+    <!-- Atividades Extracurriculares -->
+    <section class="section">
+      <h2 class="section-title">Atividades Extracurriculares</h2>
+      <ul class="list">
+        <li *ngFor="let activity of extracurricular">{{ activity }}</li>
+      </ul>
+    </section>
+
+    <!-- Competências -->
+    <section class="section">
+      <h2 class="section-title">Competências</h2>
+      <div class="competencies-grid">
+        <span class="competency-tag" *ngFor="let competency of competencies">{{ competency }}</span>
+      </div>
+    </section>
+
+    <!-- Projetos -->
+    <section class="section">
+      <h2 class="section-title">Projetos</h2>
+      <div class="projects-grid">
+        <div class="project-card" *ngFor="let project of projects">
+          <h3 class="project-title">{{ project.title }}</h3>
+          <p class="project-description">{{ project.description }}</p>
+          <div class="project-technologies">
+            <span class="tech-tag" *ngFor="let tech of project.technologies">{{ tech }}</span>
+          </div>
+          <a [href]="project.link" target="_blank" rel="noopener noreferrer" class="project-link">
+            Ver Projeto →
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; {{ currentYear }} {{ name }}. Todos os direitos reservados.</p>
+  </footer>
+</div>
