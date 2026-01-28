@@ -29,10 +29,12 @@ export class AppComponent {
   objective = 'Como desenvolvedor iniciante, busco oportunidades para ingressar na área de tecnologia, onde posso aplicar e expandir meus conhecimentos em programação. Estou focado em desenvolver minhas habilidades em Front End e Back End, banco de dados e outras tecnologias modernas, sempre com dedicação e vontade de aprender.';
 
   skills = {
-    frontend: ['React', 'TypeScript', 'Tailwind', 'Angular'],
-    backend: ['Node.js', 'Python', 'PHP', 'Ruby on Rails', 'Prisma', 'API Rest'],
-    mobile: ['Kotlin', 'Jetpack Compose'],
-    management: ['Scrum', 'Kanban', 'Trello', 'Azure']
+    frontend: ['React', 'TypeScript', 'Tailwind', 'Angular', 'JavaScript', 'HTML5', 'CSS3'],
+    backend: ['Node.js', 'Python', 'PHP', 'Ruby on Rails', 'Prisma', 'API Rest', 'Express.js', 'Django'],
+    mobile: ['Kotlin', 'Jetpack Compose', 'Android Studio', 'Material Design'],
+    database: ['MySQL', 'PostgreSQL', 'MongoDB', 'SQLite', 'Redis'],
+    devops: ['Git', 'GitHub Actions', 'Docker', 'Azure', 'Vercel', 'Linux'],
+    management: ['Scrum', 'Kanban', 'Trello', 'Jira', 'Agile']
   };
 
   education = {
